@@ -88,7 +88,7 @@ export default function HeroSection() {
       <FadeIn
         delay={0.6}
         y={30}
-        className="absolute left-1/2 -translate-x-1/2 z-10 bottom-0"
+        className="absolute left-1/2 -translate-x-1/2 z-10 top-1/2 -translate-y-1/2"
       >
         <Magnet padding={150} strength={3}>
           <img
