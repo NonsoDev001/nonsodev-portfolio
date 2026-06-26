@@ -85,20 +85,27 @@ export default function HeroSection() {
       </div>
 
       {/* Portrait — centered absolutely */}
-      <FadeIn
-        delay={0.6}
-        y={30}
-        className="absolute left-1/2 -translate-x-1/2 z-10 top-1/2 -translate-y-1/2"
-      >
-        <Magnet padding={150} strength={3}>
-          <img
-            src="https://i.ibb.co/wZ65w8Lg/20dcd5d5573a678b562c19b9fceb7b29-removebg-preview.png"
-            alt="NonsoDev 3D Avatar"
-            className="w-[280px] sm:w-[360px] md:w-[440px] lg:w-[520px] object-contain select-none pointer-events-none"
-            draggable={false}
-          />
-        </Magnet>
-      </FadeIn>
+      <div
+  style={{
+    position: 'absolute',
+    left: '50%',
+    top: '50%',
+    transform: 'translate(-50%, -40%)',
+    zIndex: 10,
+  }}
+>
+  <FadeIn delay={0.6} y={30}>
+    <Magnet padding={150} strength={3}>
+      <img
+        src="https://i.ibb.co/wZ65w8Lg/20dcd5d5573a678b562c19b9fceb7b29-removebg-preview.png"
+        alt="NonsoDev 3D Avatar"
+        style={{ width: 'clamp(280px, 35vw, 520px)' }}
+        className="object-contain select-none pointer-events-none"
+        draggable={false}
+      />
+    </Magnet>
+  </FadeIn>
+</div>
     </section>
   )
 }
