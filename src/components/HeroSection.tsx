@@ -35,12 +35,12 @@ export default function HeroSection() {
     >
       {/* Navbar */}
       <FadeIn delay={0} y={-20}>
-        <nav className="flex justify-between px-6 md:px-10 pt-6 md:pt-8">
+        <nav className="flex justify-between px-4 sm:px-6 md:px-10 pt-4 sm:pt-6 md:pt-8">
           {['About', 'Services', 'Projects', 'Contact'].map((link) => (
-            <a
+            
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="text-sm md:text-lg lg:text-[1.4rem] font-medium uppercase tracking-wider transition-opacity duration-200 hover:opacity-70"
+              className="text-[0.65rem] sm:text-sm md:text-lg lg:text-[1.4rem] font-medium uppercase tracking-wider transition-opacity duration-200 hover:opacity-70"
               style={{ color: '#D7E2EA' }}
             >
               {link}
@@ -49,25 +49,56 @@ export default function HeroSection() {
         </nav>
       </FadeIn>
 
-      {/* Hero Heading */}
+      {/* Hero Heading — reduced font size */}
       <div className="overflow-hidden">
         <FadeIn delay={0.15} y={40}>
           <h1
-            className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-[14vw] sm:text-[15vw] md:text-[16vw] lg:text-[17.5vw] mt-6 sm:mt-4 md:-mt-5"
-            style={{ paddingLeft: '2vw' }}
+            className="hero-heading font-black uppercase tracking-tight leading-none w-full"
+            style={{
+              fontSize: 'clamp(3rem, 12vw, 13vw)',
+              paddingLeft: '2vw',
+              whiteSpace: 'nowrap',
+            }}
           >
             NonsoDev
           </h1>
         </FadeIn>
       </div>
 
+      {/* Centered 3D Face */}
+      <div
+        style={{
+          position: 'absolute',
+          left: '50%',
+          top: '50%',
+          transform: 'translate(-50%, -40%)',
+          zIndex: 10,
+        }}
+      >
+        <FadeIn delay={0.6} y={30}>
+          <Magnet padding={100} strength={3}>
+            <img
+              src="https://i.ibb.co/wZ65w8Lg/20dcd5d5573a678b562c19b9fceb7b29-removebg-preview.png"
+              alt="NonsoDev 3D Avatar"
+              style={{ width: 'clamp(180px, 28vw, 460px)' }}
+              className="object-contain select-none pointer-events-none"
+              draggable={false}
+            />
+          </Magnet>
+        </FadeIn>
+      </div>
+
       {/* Bottom bar */}
-      <div className="flex justify-between items-end mt-auto pb-7 sm:pb-8 md:pb-10 px-6 md:px-10">
+      <div className="flex justify-between items-end mt-auto pb-4 sm:pb-6 md:pb-10 px-4 sm:px-6 md:px-10">
         {/* Left text */}
         <FadeIn delay={0.35} y={20}>
           <p
-            className="font-light uppercase tracking-wide leading-snug max-w-[160px] sm:max-w-[220px] md:max-w-[260px]"
-            style={{ color: '#D7E2EA', fontSize: 'clamp(0.75rem, 1.4vw, 1.5rem)' }}
+            className="font-light uppercase tracking-wide leading-snug"
+            style={{
+              color: '#D7E2EA',
+              fontSize: 'clamp(0.6rem, 1.8vw, 1.5rem)',
+              maxWidth: 'clamp(140px, 25vw, 300px)',
+            }}
           >
             building{' '}
             <span className="font-bold" style={{ color: '#B600A8' }}>
@@ -78,34 +109,11 @@ export default function HeroSection() {
           </p>
         </FadeIn>
 
-        {/* Right: Contact button */}
+        {/* Contact button */}
         <FadeIn delay={0.5} y={20}>
           <ContactButton />
         </FadeIn>
       </div>
-
-      {/* Portrait — centered absolutely */}
-      <div
-  style={{
-    position: 'absolute',
-    left: '50%',
-    top: '50%',
-    transform: 'translate(-50%, -40%)',
-    zIndex: 10,
-  }}
->
-  <FadeIn delay={0.6} y={30}>
-    <Magnet padding={150} strength={3}>
-      <img
-        src="https://i.ibb.co/wZ65w8Lg/20dcd5d5573a678b562c19b9fceb7b29-removebg-preview.png"
-        alt="NonsoDev 3D Avatar"
-        style={{ width: 'clamp(280px, 35vw, 520px)' }}
-        className="object-contain select-none pointer-events-none"
-        draggable={false}
-      />
-    </Magnet>
-  </FadeIn>
-</div>
     </section>
   )
 }
