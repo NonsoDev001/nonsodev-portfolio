@@ -58,7 +58,11 @@ export default function AboutSection() {
 
         <div className="flex flex-col items-center gap-16 sm:gap-20 md:gap-24">
           <AnimatedText
-            text="I'm Nonso — Co-Founder and CTO of Koeta Limited. I build AI-powered products that actually work — WhatsApp agents, mobile apps, and automation systems that drive real business results. With hands-on experience shipping products to the App Store and deploying live client systems, I combine technical execution with strategic thinking. Every project I take on is built to stand out, scale, and deliver. Let's build something incredible together."
+            text="I'm Nonso — Co-Founder and CTO of Koeta Limited. 
+            I build AI-powered products that actually work — WhatsApp agents, mobile apps, and automation systems that drive real business results.
+            With hands-on experience shipping products to the App Store and deploying live client systems, I combine technical execution with strategic thinking. 
+            Every project I take on is built to stand out, scale, and deliver. 
+            Let's build something incredible together."
             className="font-medium text-center leading-relaxed max-w-[560px]"
             style={{
               color: '#D7E2EA',
