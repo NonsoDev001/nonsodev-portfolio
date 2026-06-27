@@ -66,7 +66,7 @@ export default function HeroSection() {
   return (
     <section style={{ overflowX: 'clip', background: '#0C0C0C', minHeight: '100svh', display: 'flex', flexDirection: 'column' }}>
 
-      {/* ── NAVBAR ── */}
+      {/* NAVBAR */}
       <FadeIn delay={0} y={-20}>
         <nav style={{ display: 'flex', justifyContent: 'space-between', padding: '16px 20px 0' }}>
           {navLinks.map((link) => (
@@ -89,18 +89,16 @@ export default function HeroSection() {
         </nav>
       </FadeIn>
 
-      {/* ══════════════════════════════════
-          MOBILE LAYOUT (hidden on md+)
-      ══════════════════════════════════ */}
+      {/* MOBILE LAYOUT */}
       <div className="flex md:hidden flex-col items-center flex-1" style={{ padding: '0 20px 24px' }}>
 
-        {/* Name */}
+        {/* I'm Nonso — mobile heading */}
         <FadeIn delay={0.15} y={40}>
           <h1
             className="hero-heading font-black uppercase tracking-tight leading-none text-center w-full"
-            style={{ fontSize: 'clamp(3rem, 17vw, 5rem)', marginTop: '8px' }}
+            style={{ fontSize: 'clamp(2.8rem, 15vw, 4.5rem)', marginTop: '8px' }}
           >
-            NonsoDev
+            I&apos;m Nonso
           </h1>
         </FadeIn>
 
@@ -109,7 +107,7 @@ export default function HeroSection() {
           <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
             <img
               src="https://i.ibb.co/wZ65w8Lg/20dcd5d5573a678b562c19b9fceb7b29-removebg-preview.png"
-              alt="NonsoDev 3D Avatar"
+              alt="Nonso 3D Avatar"
               style={{ width: 'clamp(180px, 58vw, 260px)', display: 'block' }}
               className="object-contain select-none pointer-events-none"
               draggable={false}
@@ -117,7 +115,7 @@ export default function HeroSection() {
           </div>
         </FadeIn>
 
-        {/* Typing text — RIGHT BELOW FACE */}
+        {/* Typing text below face */}
         <FadeIn delay={0.5} y={20}>
           <div
             style={{
@@ -141,7 +139,7 @@ export default function HeroSection() {
           </div>
         </FadeIn>
 
-        {/* WhatsApp button — pushed to bottom */}
+        {/* WhatsApp button at bottom */}
         <div style={{ marginTop: 'auto', paddingTop: '32px' }}>
           <FadeIn delay={0.65} y={20}>
             <WhatsAppButton />
@@ -149,30 +147,28 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* ══════════════════════════════════
-          DESKTOP LAYOUT (hidden below md)
-      ══════════════════════════════════ */}
+      {/* DESKTOP LAYOUT */}
       <div className="hidden md:flex flex-col flex-1 relative">
 
-        {/* Name */}
+        {/* I'm Nonso — desktop heading */}
         <div style={{ overflow: 'hidden' }}>
           <FadeIn delay={0.15} y={40}>
             <h1
               className="hero-heading font-black uppercase tracking-tight leading-none w-full"
               style={{ fontSize: 'clamp(5rem, 11vw, 13vw)', paddingLeft: '2vw', whiteSpace: 'nowrap', marginTop: '-8px' }}
             >
-              NonsoDev
+              I&apos;m Nonso
             </h1>
           </FadeIn>
         </div>
 
-        {/* Face centered */}
+        {/* Face centered behind heading */}
         <div style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -42%)', zIndex: 10 }}>
           <FadeIn delay={0.6} y={30}>
             <Magnet padding={100} strength={3}>
               <img
                 src="https://i.ibb.co/wZ65w8Lg/20dcd5d5573a678b562c19b9fceb7b29-removebg-preview.png"
-                alt="NonsoDev 3D Avatar"
+                alt="Nonso 3D Avatar"
                 style={{ width: 'clamp(280px, 30vw, 500px)' }}
                 className="object-contain select-none pointer-events-none"
                 draggable={false}
