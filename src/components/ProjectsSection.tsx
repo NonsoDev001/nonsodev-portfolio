@@ -5,32 +5,35 @@ import FadeIn from './FadeIn'
 const projects = [
   {
     num: '01',
-    name: 'HAP Properties',
-    category: 'Client · WhatsApp AI Agent',
+    name: 'TaxPaddy',
+    category: 'Product · iOS & Android App',
+    liveUrl: 'https://www.taxpaddy.com',
     images: {
-      col1a: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055344_5eff02e0-87a5-41ce-b64f-eb08da8f33db.png&w=1280&q=85',
-      col1b: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055431_11d841fd-8b41-46a5-82e4-b04f2407a7d8.png&w=1280&q=85',
-      col2: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055451_e317bf2d-28d4-48cc-86b0-6f72f25b6327.png&w=1280&q=85',
+      col1a: 'https://i.ibb.co/ZvYtQ4s/TAXPADDY-SCREEENSHOTS-1.png',
+      col1b: 'https://i.ibb.co/VYT85wCp/IMG-20251215-WA0012-1.jpg',
+      col2: 'https://i.ibb.co/TM5tBqjT/IMG-6665.png',
     },
   },
   {
     num: '02',
-    name: 'TaxPaddy',
-    category: 'Product · Mobile App (iOS & Android)',
+    name: 'PetNutri AI',
+    category: 'Product · iOS Mobile App',
+    liveUrl: '#',
     images: {
-      col1a: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055654_911201c5-36d9-4bc6-bac7-331adfce159f.png&w=1280&q=85',
-      col1b: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055723_5ceda0b8-d9c2-4665-b2e3-83ba19ba76d1.png&w=1280&q=85',
-      col2: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055753_adc5dcbd-a8e6-49c0-b43a-9b030d835cea.png&w=1280&q=85',
+      col1a: 'https://i.ibb.co/mVryGmwf/Screenshot-2026-04-16-00-10-35-845-com-freetaldev-petnutri-2.jpg',
+      col1b: 'https://i.ibb.co/QFz04kD6/Screenshot-2026-04-15-02-06-41-377-com-freetaldev-petnutri-2.jpg',
+      col2: 'https://i.ibb.co/mVryGmwf/Screenshot-2026-04-16-00-10-35-845-com-freetaldev-petnutri-2.jpg',
     },
   },
   {
     num: '03',
-    name: 'PetNutri AI',
-    category: 'Product · Mobile App (iOS)',
+    name: 'HAP Properties',
+    category: 'Client · WhatsApp AI Agent',
+    liveUrl: '#',
     images: {
-      col1a: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055759_963cfb0b-4bd1-4b0f-9d0a-09bd6cf95b2f.png&w=1280&q=85',
-      col1b: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_060108_438f781a-9846-4dcc-89ab-c4e6cb830f5b.png&w=1280&q=85',
-      col2: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055818_9d062121-ad7e-46b9-999a-1a6a692ef1ee.png&w=1280&q=85',
+      col1a: 'https://i.ibb.co/ZvYtQ4s/TAXPADDY-SCREEENSHOTS-1.png',
+      col1b: 'https://i.ibb.co/VYT85wCp/IMG-20251215-WA0012-1.jpg',
+      col2: 'https://i.ibb.co/TM5tBqjT/IMG-6665.png',
     },
   },
 ]
@@ -46,9 +49,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
 
   const targetScale = 1 - (totalCards - 1 - index) * 0.03
   const scale = useTransform(scrollYProgress, [0, 1], [1, targetScale])
-
-  const borderRadius = 'clamp(24px, 5vw, 60px)'
-  const imgRadius = borderRadius
+  const borderRadius = 'clamp(20px, 4vw, 50px)'
 
   return (
     <div
@@ -69,61 +70,72 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
       >
         {/* Top row */}
         <div className="flex items-center justify-between mb-4 sm:mb-6 flex-wrap gap-3">
-          <div className="flex items-center gap-4 sm:gap-6">
+          <div className="flex items-center gap-3 sm:gap-6">
             <span
               className="font-black leading-none"
-              style={{ color: '#D7E2EA', fontSize: 'clamp(2rem, 6vw, 80px)', opacity: 0.3 }}
+              style={{ color: '#D7E2EA', fontSize: 'clamp(1.8rem, 5vw, 70px)', opacity: 0.3 }}
             >
               {project.num}
             </span>
             <div>
               <p
                 className="font-light uppercase tracking-widest"
-                style={{ color: '#D7E2EA', opacity: 0.5, fontSize: 'clamp(0.65rem, 1.2vw, 0.9rem)' }}
+                style={{ color: '#D7E2EA', opacity: 0.5, fontSize: 'clamp(0.6rem, 1.1vw, 0.85rem)' }}
               >
                 {project.category}
               </p>
               <p
                 className="font-black uppercase leading-tight"
-                style={{ color: '#D7E2EA', fontSize: 'clamp(1.2rem, 3.5vw, 3rem)' }}
+                style={{ color: '#D7E2EA', fontSize: 'clamp(1rem, 3vw, 2.8rem)' }}
               >
                 {project.name}
               </p>
             </div>
           </div>
           <a
-            href="#"
-            className="rounded-full border-2 px-8 py-3 sm:px-10 sm:py-3.5 text-sm sm:text-base font-medium uppercase tracking-widest transition-colors hover:bg-white/10"
-            style={{ borderColor: '#D7E2EA', color: '#D7E2EA' }}
+            href={project.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border-2 font-medium uppercase tracking-widest transition-colors hover:bg-white/10"
+            style={{
+              borderColor: '#D7E2EA',
+              color: '#D7E2EA',
+              padding: 'clamp(8px, 1vw, 14px) clamp(16px, 2.5vw, 40px)',
+              fontSize: 'clamp(0.65rem, 1.2vw, 0.95rem)',
+            }}
           >
             Live Project
           </a>
         </div>
 
         {/* Image grid */}
-        <div className="flex gap-3 sm:gap-4" style={{ height: 'clamp(280px, 40vw, 580px)' }}>
-          {/* Left col — 40% */}
+        <div
+          className="flex gap-3 sm:gap-4"
+          style={{ height: 'clamp(220px, 38vw, 540px)' }}
+        >
+          {/* Left col — 40% — two stacked images */}
           <div className="flex flex-col gap-3 sm:gap-4" style={{ width: '40%' }}>
             <img
               src={project.images.col1a}
               alt={project.name}
-              className="w-full object-cover"
-              style={{ height: 'clamp(130px, 16vw, 230px)', borderRadius: imgRadius }}
+              className="w-full object-cover object-top"
+              style={{ height: 'clamp(100px, 15vw, 210px)', borderRadius }}
             />
             <img
               src={project.images.col1b}
               alt={project.name}
-              className="w-full object-cover flex-1"
-              style={{ borderRadius: imgRadius }}
+              className="w-full object-cover object-top flex-1"
+              style={{ borderRadius, minHeight: 0 }}
             />
           </div>
-          {/* Right col — 60% */}
+
+          {/* Right col — 60% — one tall image */}
           <div style={{ width: '60%' }}>
             <img
               src={project.images.col2}
               alt={project.name}
-              className="w-full h-full object-cover"
-              style={{ borderRadius: imgRadius }}
+              className="w-full h-full object-cover object-top"
+              style={{ borderRadius }}
             />
           </div>
         </div>
